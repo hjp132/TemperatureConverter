@@ -31,7 +31,7 @@ namespace TemperatureConverter_1
 			menu();
 			// asks the user for a input, char as it prevents them from inputting more than one digit
 			userInput = GetUserInputChar("Please pick an item to convert from:");
-			// 888888888888888888888888888888888
+			// Converting to 
 			ConversionType conversionType = ConvertUserInputToConversionType(userInput);
 			// loop for the user input in order to send them relevant place
 			do
@@ -116,7 +116,8 @@ namespace TemperatureConverter_1
 			// rather than having a longer if statement by using .ToLower and .KeyChar meaning they can only input a single letter which is lowercase.
 			if (choice == "y")
 			{
-				// runs Main, restarting the program
+                // runs Main, restarting the program
+                Console.WriteLine("");
 				Main();
 			}
 			else
@@ -169,7 +170,7 @@ namespace TemperatureConverter_1
 		static void FahrenheitConverterValues()
 		{
 			// prints what the user inputted to the console
-			string message = "\nYou've entered the value: " + userInput + "�F.\n";
+			string message = "\nYou've entered the value: " + userInput + "°F.\n";
 			Console.WriteLine(message);
 			// runs the FahrenheitToCelsius, FahrenheitToKelvin methods
 			FahrenheitToCelsius();
@@ -179,7 +180,7 @@ namespace TemperatureConverter_1
 		{
 			//the formula used to convert fahrenheit to celsius
 			celsius = (userInput - 32) * 5 / 9;
-			string message = "In Celsius thats: " + celsius + "�C";
+			string message = "In Celsius thats: " + celsius + "°C";
 			// writes the converted amount to the console
 			Console.WriteLine(message);
 		}
@@ -187,7 +188,7 @@ namespace TemperatureConverter_1
 		{
 			// the formula used to conver fahrenheit to kelvin
 			kelvin = (userInput - 32) * 5 / 9 + 273.15;
-			string message = "In Kelvin thats: " + kelvin + "K";
+			string message = "In Kelvin thats: " + kelvin + "°K";
 			// writes the converted amount to the console
 			Console.WriteLine(message);
 		}
@@ -208,7 +209,7 @@ namespace TemperatureConverter_1
 		{
 			// the formula for converting to celsius
 			celsius = (userInput - 273.15);
-			string message = "In Celsius thats: " + celsius + "�C";
+			string message = "In Celsius thats: " + celsius + "°C";
 			// writes the converted amount to the console
 			Console.WriteLine(message);
 		}
@@ -216,13 +217,13 @@ namespace TemperatureConverter_1
 		{
 			// the formula for converting to fahrenheit
 			fahrenheit = (userInput - 273.15) * 9 / 5 + 32;
-			string message = "In Fahrenheit thats: " + fahrenheit + "�F";
+			string message = "In Fahrenheit thats: " + fahrenheit + "°F";
 			// writes the converted amount to the console
 			Console.WriteLine(message);
 		}
 		static void Quit()
 		{
-			Console.WriteLine("\nThank you for using the temperature conversion application.");
+			Console.WriteLine("\nThank you for using the temperature conversion application.\n");
 			// quits the application
 			System.Environment.Exit(1);
 		}
